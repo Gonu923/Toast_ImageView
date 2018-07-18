@@ -1,0 +1,40 @@
+package com.example.naeem.fifthclass;
+
+import android.location.Location;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    private ImageView img1, img2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        img1 = (ImageView) findViewById(R.id.imageView);
+        img2 = (ImageView) findViewById(R.id.imageView2);
+
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Toast  toast = Toast.makeText(MainActivity.this,"Mr. Rahim",Toast.LENGTH_SHORT);
+               toast.setGravity(Gravity.CENTER,0,0);
+                toast.show();
+            }
+        });
+        img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast  toast = Toast.makeText(MainActivity.this,"Mr. Karim",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER,0,450);
+                toast.show();
+
+            }
+        });
+    }
+}
